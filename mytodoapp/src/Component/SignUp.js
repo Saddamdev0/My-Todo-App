@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 const SignUp = ()=>{
     const API_URL = process.env.REACT_APP_API_URL;
-    console.log("Api: ", API_URL)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const signups = async ()=>{
@@ -15,7 +14,6 @@ const SignUp = ()=>{
     })
 
     }
-    console.log("email: ", email, "password: ", password)
     return(<Box sx={{mt:2}}>
         <Stack sx={{gap:3}}>
            <Typography variant="h3">Welcome to TodoApp</Typography>
