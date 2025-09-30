@@ -1,8 +1,10 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
+// const functions = require("firebase-functions");
+import * as functions from "firebase-functions"
+// const admin = require("firebase-admin");
+import * as admin from "firebase-admin"
 const cors = require("cors")({origin: true});
 admin.initializeApp();
-exports.SignUp = functions.https.onRequest((req, res) => {
+exports.SignUp = functions.https.onCall((req, res) => {
   cors(req, res, async () => {
     if (req.method !== "POST") {
       return res.status(405).json({error: "Method not allowed"});
